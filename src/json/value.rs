@@ -135,7 +135,7 @@ impl JsonRender for Json {
                 buf.push(']');
                 buf
             }
-            Json::Object(_) => "[object]".to_owned(),
+            Json::Object(o) => format!("{o:?}"),
         }
     }
 }
