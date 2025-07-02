@@ -791,7 +791,7 @@ fn render_helper<'reg: 'rc, 'rc>(
 ) -> Result<(), RenderError> {
     let h = Helper::try_from_template(ht, registry, ctx, rc)?;
     debug!(
-        "Rendering helper: {:?}, params: {:?}, hash: {:?}",
+        "Rendering helper: {:?}, params: {:?}, hash: {:?}, rc={rc:?} c={ctx:?}",
         h.name(),
         h.params(),
         h.hash()
